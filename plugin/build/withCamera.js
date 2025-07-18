@@ -3,14 +3,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.addCameraImport = void 0;
 const config_plugins_1 = require("@expo/config-plugins");
 const generateCode_1 = require("@expo/config-plugins/build/utils/generateCode");
-const pkg = require('expo-camera/package.json');
+const pkg = require('secullum-expo-camera/package.json');
 const CAMERA_USAGE = 'Allow $(PRODUCT_NAME) to access your camera';
 const MICROPHONE_USAGE = 'Allow $(PRODUCT_NAME) to access your microphone';
 // Because we need the package to be added AFTER the React and Google maven packages, we create a new allprojects.
 // It's ok to have multiple allprojects.repositories, so we create a new one since it's cheaper than tokenizing
 // the existing block to find the correct place to insert our camera maven.
 const gradleMaven = [
-    `def expoCameraMavenPath = new File(["node", "--print", "require.resolve('expo-camera/package.json')"].execute(null, rootDir).text.trim(), "../android/maven")`,
+    `def expoCameraMavenPath = new File(["node", "--print", "require.resolve('secullum-expo-camera/package.json')"].execute(null, rootDir).text.trim(), "../android/maven")`,
     `allprojects { repositories { maven { url(expoCameraMavenPath) } } }`,
 ].join('\n');
 const withAndroidCameraGradle = (config) => {
