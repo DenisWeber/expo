@@ -1,37 +1,38 @@
 {
-  "name": "@expo/expo",
-  "version": "1.4.0",
-  "private": true,
-  "author": "Expo",
-  "license": "MIT",
+  "name": "secullum-expo-camera",
+  "version": "1.0.0",
+  "description": "A React component that renders a preview for the device's either front or back camera. Camera's parameters like zoom, auto focus, white balance and flash mode are adjustable. With expo-camera, one can also take photos and record videos that are saved to the app's cache. Morever, the component is also capable of detecting faces and bar codes appearing on the preview.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "sideEffects": false,
   "scripts": {
-    "setup:docs": "./scripts/download-dependencies.sh",
-    "setup:native": "./scripts/download-dependencies.sh && ./scripts/setup-react-android.sh",
-    "postinstall": "yarn-deduplicate && yarn workspace @expo/cli prepare && node ./tools/bin/expotools.js validate-workspace-dependencies",
-    "lint": "eslint .",
-    "tsc": "echo 'You are trying to run \"tsc\" in the workspace root. Run it from an individual package instead.' && exit 1"
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test"
   },
-  "workspaces": {
-    "packages": [
-      "apps/*",
-      "packages/*",
-      "packages/@expo/*"
-    ]
+  "keywords": [
+    "react-native",
+    "expo",
+    "camera"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DenisWeber/expo-camera"
   },
-  "resolutions": {
-    "react-native": "0.74.5",
-    "@react-navigation/native": "^6.1.6",
-    "@react-navigation/core": "^6.4.9",
-    "**/util": "~0.12.4"
+  "author": "650 Industries, Inc.",
+  "license": "MIT",
+  "homepage": "https://docs.expo.dev/versions/latest/sdk/camera/",
+  "jest": {
+    "preset": "expo-module-scripts"
   },
   "dependencies": {
-    "eslint": "^8.56.0",
-    "jsc-android": "^250231.0.0",
-    "node-gyp": "^10.0.1",
-    "prettier": "^3.1.1",
-    "yarn-deduplicate": "^6.0.2"
+    "invariant": "^2.2.4"
   },
-  "volta": {
-    "node": "20.12.2"
+  "devDependencies": {
+    "expo-module-scripts": "^3.0.0"
+  },
+  "peerDependencies": {
+    "expo": "*"
   }
 }
