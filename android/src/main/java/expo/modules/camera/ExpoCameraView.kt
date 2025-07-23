@@ -247,9 +247,6 @@ class ExpoCameraView(
       ContextCompat.getMainExecutor(context),
       object : ImageCapture.OnImageCapturedCallback() {
         override fun onCaptureStarted() {
-          if (volume != 0) {
-            MediaActionSound().play(MediaActionSound.SHUTTER_CLICK)
-          }
           if (!animateShutter) {
             return
           }
