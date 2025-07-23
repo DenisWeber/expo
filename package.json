@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DenisWeber/expo-camera.git"
+    "url": "git+https://github.com/Secullum/expo-camera.git"
   },
   "author": "650 Industries, Inc.",
   "license": "MIT",
@@ -36,6 +36,6 @@
     "expo": "*"
   },
   "bugs": {
-    "url": "https://github.com/DenisWeber/expo-camera/issues"
+    "url": "https://github.com/Secullum/expo-camera/issues"
   }
 }
