@@ -18,7 +18,7 @@ For bare React Native projects, you must ensure that you have [installed and con
 ### Add the package to your npm dependencies
 
 ```
-npx expo install expo-camera
+npx expo install secullum-expo-camera
 ```
 
 ### Configure for iOS
@@ -57,7 +57,7 @@ allprojects {
         // * Add a new maven block after other repositories / blocks *
         maven {
             // expo-camera bundles a custom com.google.android:cameraview
-            url "$rootDir/../node_modules/expo-camera/android/maven"
+            url "$rootDir/../node_modules/secullum-expo-camera/android/maven"
         }
     }
 }
